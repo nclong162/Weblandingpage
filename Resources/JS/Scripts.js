@@ -18,8 +18,23 @@ $(document).ready(
                     scrollTop: $( $.attr(this, 'href') ).offset().top
                 }, 700);
                 event.preventDefault();
-            })
-        
+            });
+
+            // mobile nav
+        $('.mobile-nav-icon').click(
+            function () {
+                $('.main-nav').slideToggle(200);
+                if($('.mobile-nav-icon').hasClass('fa-bars')){
+                    $('.mobile-nav-icon').addClass('fa-times');
+                    $('.mobile-nav-icon').removeClass('fa-bars')
+                }
+                else{
+                    $('.mobile-nav-icon').addClass('fa-bars');
+                    $('.mobile-nav-icon').removeClass('fa-times')
+
+                }
+            }
+        )
 
 
     }
